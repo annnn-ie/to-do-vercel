@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Geist Sans', 'sans-serif'],
+				mono: ['Geist Mono', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -64,18 +67,18 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				todo: {
-					low: '#8E9196',
-					medium: '#7E69AB',
-					high: '#8B5CF6',
+					low: '#78716c',
+					medium: '#57534e',
+					high: '#44403c',
 					tag: {
-						green: '#F2FCE2',
-						yellow: '#FEF7CD',
-						orange: '#FEC6A1',
-						purple: '#E5DEFF',
-						pink: '#FFDEE2',
-						blue: '#D3E4FD',
-						peach: '#FDE1D3',
-						gray: '#F1F0FB'
+						green: '#f0fdf4',
+						yellow: '#fefce8',
+						orange: '#fff7ed',
+						purple: '#faf5ff',
+						pink: '#fdf2f8',
+						blue: '#eff6ff',
+						peach: '#fff1f2',
+						gray: '#f8fafc'
 					}
 				}
 			},
