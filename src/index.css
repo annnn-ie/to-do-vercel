@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 262 84% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 24% 95%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 262 84% 63%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262 84% 63%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .todo-container {
+    @apply max-w-3xl mx-auto px-4 py-8 min-h-screen;
+  }
+
+  .todo-input-container {
+    @apply w-full flex gap-2 mb-8;
+  }
+
+  .todo-input {
+    @apply flex-1 px-4 py-3 rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all;
+  }
+
+  .todo-item {
+    @apply w-full px-4 py-3 flex items-center gap-3 bg-white rounded-lg shadow-sm mb-2 transition-all duration-200 border border-transparent hover:border-primary/10 animate-slide-in;
+  }
+
+  .todo-tag {
+    @apply inline-flex items-center justify-center h-6 px-2 text-xs font-medium rounded-full mr-1;
+  }
+
+  .priority-indicator {
+    @apply w-2 h-2 rounded-full flex-shrink-0;
+  }
+
+  .priority-low {
+    @apply bg-todo-low;
+  }
+
+  .priority-medium {
+    @apply bg-todo-medium;
+  }
+
+  .priority-high {
+    @apply bg-todo-high;
+  }
+
+  .drag-item {
+    @apply cursor-move;
+  }
+
+  .edit-input {
+    @apply w-full px-0 py-0 bg-transparent border-none focus:outline-none focus:ring-0;
+  }
+}
