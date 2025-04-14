@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Plus, Trash } from 'lucide-react';
 import { DragDropContext, Droppable, Draggable, DropResult } from 'react-beautiful-dnd';
@@ -62,7 +61,11 @@ export const TodoContainer: React.FC = () => {
 
   return (
     <div className="todo-container">
-      <h1 className="text-3xl font-bold mb-8 text-center tracking-tight">Clean Todo App</h1>
+      <h1 className="text-3xl font-bold mb-2 text-center tracking-tight">To-do Today</h1>
+      <div className="text-center text-xs text-gray-400 mb-8">
+        <p>Tip: Use ! for low priority, !! for medium, !!! for high</p>
+        <p>Use #tag to add tags to your tasks</p>
+      </div>
       
       <div className="todo-input-container">
         <input
@@ -135,11 +138,6 @@ export const TodoContainer: React.FC = () => {
           </p>
         </div>
       )}
-      
-      <div className="mt-8 text-center text-xs text-gray-400">
-        <p>Tip: Use ! for low priority, !! for medium, !!! for high</p>
-        <p>Use #tag to add tags to your tasks</p>
-      </div>
     </div>
   );
 };
